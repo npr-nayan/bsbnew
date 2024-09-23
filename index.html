@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Sheets Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="container">
+    <img src="pic.jpg" alt="Nayon">
+    <h1>Submit Your Information</h1>
+    <form id="textForm">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" placeholder="Your Name" required><br><br>
+      
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" placeholder="Your Email" required><br><br>
+      
+      <label for="phone">Phone:</label><br>
+      <input type="tel" id="phone" placeholder="Your Phone Number" required><br><br>
+      
+      <label for="institute">Institute Name:</label><br>
+      <input type="text" id="institute" placeholder="Your Institute" required><br><br>
+
+      <label for="userInput">Enter your text (Max 1000 words):</label><br>
+      <textarea id="userInput" rows="10" placeholder="Type your text here..." oninput="countWords()" required></textarea>
+      <p id="wordCount">0 / 1000 words</p>
+      
+      <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form>
+    <p id="message"></p>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
